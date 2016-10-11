@@ -1,1 +1,2 @@
-# mycase
+README for mycase
+==========================
