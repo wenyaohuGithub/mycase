@@ -9,11 +9,11 @@ spring:
         active: dev
     datasource:
         dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
-        url: 
+        url:
         databaseName: mycase
         serverName: localhost
-        username: mycase
-        password: 
+        username: postgres
+        password: Scala350!
 
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL82Dialect
