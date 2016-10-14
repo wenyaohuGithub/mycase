@@ -877,6 +877,9 @@ th {
 .glyphicon-cloud-upload:before {
   content: "\e198";
 }
+.glyphicon-group:before {
+    content: "\f0c0";
+}
 .glyphicon-tree-conifer:before {
   content: "\e199";
 }

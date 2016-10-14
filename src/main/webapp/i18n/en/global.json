@@ -8,6 +8,14 @@
                 "main": "Entities",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
+            "dashboard": "Dashboard",
+            "project": "Project",
+            "category": "Category",
+            "contract": "Contract",
+            "team": "Team",
+            "task": "Task",
+            "alert": "Alert",
+            "message": "Message",
             "account": {
                 "main": "Account",
                 "settings": "Settings",
