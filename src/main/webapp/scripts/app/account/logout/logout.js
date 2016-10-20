@@ -11,7 +11,7 @@ angular.module('mycaseApp')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/main/main.html',
+                        templateUrl: 'scripts/app/account/login/loing.html',
                         controller: 'LogoutController'
                     }
                 }

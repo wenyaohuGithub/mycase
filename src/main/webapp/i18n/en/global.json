@@ -6,10 +6,14 @@
             "home": "Home",
             "entities": {
                 "main": "Entities",
+                "firstEntity": "FirstEntity",
+                "secondEntity": "SecondEntity",
                 "additionalEntity": "JHipster will add additional entities here (do not translate!)"
             },
             "dashboard": "Dashboard",
             "project": "Project",
+            "newproject": "New Project",
+            "newcontract": "New Contract",
             "category": "Category",
             "contract": "Contract",
             "team": "Team",

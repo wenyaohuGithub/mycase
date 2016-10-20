@@ -11,15 +11,14 @@ angular.module('mycaseApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalp
             $rootScope.toState = toState;
             $rootScope.toStateParams = toStateParams;
 
-            if (Principal.isIdentityResolved()) {
-                Auth.authorize();
-            }
-
             // Update the language
             Language.getCurrent().then(function (language) {
                 $translate.use(language);
             });
 
+            if (Principal.isIdentityResolved()){
+                Auth.authorize();
+            }
         });
 
         $rootScope.$on('$stateChangeSuccess',  function(event, toState, toParams, fromState, fromParams) {
@@ -37,13 +36,17 @@ angular.module('mycaseApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalp
                 // Change window title with translated one
                 $window.document.title = title;
             });
-
+            if (Principal.isIdentityResolved()){
+                if(!Principal.isAuthenticated()){
+                    $state.go('login');
+                }
+            }
         });
 
         $rootScope.back = function() {
             // If previous state is 'activate' or do not exist go to 'home'
             if ($rootScope.previousStateName === 'activate' || $state.get($rootScope.previousStateName) === null) {
-                $state.go('home');
+                $state.go('dashboard');
             } else {
                 $state.go($rootScope.previousStateName, $rootScope.previousStateParams);
             }

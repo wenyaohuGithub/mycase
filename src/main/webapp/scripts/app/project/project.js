@@ -3,7 +3,7 @@
 angular.module('mycaseApp')
     .config(function ($stateProvider) {
         $stateProvider
-            .state('home', {
+            .state('project', {
                 parent: 'site',
                 url: '/',
                 data: {
@@ -11,13 +11,13 @@ angular.module('mycaseApp')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'scripts/app/dashboard/dashboard.html',
-                        controller: 'DashboardController'
+                        templateUrl: 'scripts/app/project/project.html',
+                        controller: 'ProjectController'
                     }
                 },
                 resolve: {
                     mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate,$translatePartialLoader) {
-                        $translatePartialLoader.addPart('main');
+                        $translatePartialLoader.addPart('project');
                         return $translate.refresh();
                     }]
                 }

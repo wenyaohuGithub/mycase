@@ -255,3 +255,9 @@ ul#strengthBar {
         margin-top: 0px;
     }
 }
+
+.page-sm-header {
+    padding-bottom: 5px;
+    margin: 10px 0 10px;
+    border-bottom: 1px solid #eee;
+}

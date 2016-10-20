@@ -1,0 +1,79 @@
+
+<div>
+    <h2><span translate="mycaseApp.contract.detail.title">Contract</span> {{contract.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.annual_spend_amount">Annual_spend_amount</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.annual_spend_amount}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.owner">Owner</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.owner}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.supplier">Supplier</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.supplier}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.fk_owner_person">fk_owner_person</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.fk_owner_person.id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.fk_supplier_person">fk_supplier_person</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.fk_supplier_person.id}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="contract"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
