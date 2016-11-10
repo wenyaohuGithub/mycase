@@ -18,15 +18,6 @@ import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
 import java.util.Locale;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.util.Properties;
-
-import javax.mail.Folder;
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.Store;
-
 /**
  * Service for sending e-mails.
  * <p/>
@@ -103,40 +94,5 @@ public class MailService {
         String content = templateEngine.process("passwordResetEmail", context);
         String subject = messageSource.getMessage("email.reset.title", null, locale);
         sendEmail(user.getEmail(), subject, content, false, true);
-    }
-
-    @Async
-    public void read() {
-        Properties props = new Properties();
-        try {
-            props.setProperty("mail.smtp.host", env.getProperty("mail.host"));
-            props.setProperty("mail.smtp.socketFactory.port", env.getProperty("mail.port"));
-            props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-            props.setProperty("mail.smtp.auth",env.getProperty("mail.auth"));
-            props.setProperty("mail.smtp.port", env.getProperty("mail.port"));
-            Session session = Session.getDefaultInstance(props, null);
-
-            Store store = session.getStore("imaps");
-            store.connect("smtp.gmail.com", "gogoeagles@gmail.com", "xianxian");
-
-            Folder inbox = store.getFolder("inbox");
-            inbox.open(Folder.READ_ONLY);
-            int messageCount = inbox.getMessageCount();
-
-            log.debug("Total Messages:- " + messageCount);
-
-            Message[] messages = inbox.getMessages();
-
-            log.debug("------------------------------");
-            int count = messages.length -1;
-            for (int i = count; i > count - 11; i--) {
-                log.debug("Mail Subject:- " + messages[i].getSubject());
-            }
-
-            inbox.close(true);
-            store.close();
-        } catch (Exception e) {
-            log.debug(e.getLocalizedMessage());
-        }
     }
 }

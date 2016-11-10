@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="mycaseApp.contract.detail.title">Contract</span> {{contract.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.start_date">Start_date</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.start_date}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.end_date">End_date</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.end_date}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.exp_date">Exp_date</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.exp_date}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.contract.notice_period">Notice_period</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{contract.notice_period}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <nav class="navbar navbar-default" style="margin-left: 15px; margin-right: 15px" role="navigation">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav nav-pills navbar-left">
+                        <li class="pointer">
+                            <a ui-sref="contract.detail({id:contract.id})"><span class="glyphicon glyphicon-arrow-left"></span>Back
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
