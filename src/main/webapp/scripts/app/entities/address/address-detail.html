@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span translate="mycaseApp.address.detail.title">Address</span> {{address.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.address.address_line_1">Address_line_1</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{address.address_line_1}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.address.address_line_2">Address_line_2</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{address.address_line_2}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.address.city">City</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{address.city}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.address.province">Province</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{address.province}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.address.country">Country</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{address.country}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.address.postal_code">Postal_code</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{address.postal_code}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="address"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

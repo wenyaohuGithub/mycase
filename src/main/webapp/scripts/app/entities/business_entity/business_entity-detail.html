@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span translate="mycaseApp.business_entity.detail.title">Business_entity</span> {{business_entity.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.business_entity.name">Name</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{business_entity.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.business_entity.description">Description</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{business_entity.description}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.business_entity.registration_id">Registration_id</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{business_entity.registration_id}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.business_entity.registered_capital">Registered_capital</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{business_entity.registered_capital}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.business_entity.registration_inspection_record">Registration_inspection_record</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{business_entity.registration_inspection_record}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.business_entity.legal_representative">legal_representative</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{business_entity.legal_representative.first_name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="business_entity"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

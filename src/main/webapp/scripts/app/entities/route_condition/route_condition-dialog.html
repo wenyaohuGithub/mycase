@@ -1,0 +1,47 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myRoute_conditionLabel" translate="mycaseApp.route_condition.home.createOrEditLabel">Create or edit a Route_condition</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label translate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id"
+                    ng-model="route_condition.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="mycaseApp.route_condition.previous_step_result" for="field_previous_step_result">Previous_step_result</label>
+            <input type="checkbox" class="form-control" name="previous_step_result" id="field_previous_step_result"
+                    ng-model="route_condition.previous_step_result">
+
+        </div>
+
+        <div class="form-group">
+            <label translate="mycaseApp.route_condition.route" for="field_route">route</label>
+            <select class="form-control" id="field_route" name="route" ng-model="route_condition.route.id" ng-options="route.id as route.name for route in routes">
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.route_condition.submitter_role" for="field_submitter_role">submitter_role</label>
+            <select class="form-control" id="field_submitter_role" name="submitter_role" ng-model="route_condition.submitter_role.id" ng-options="role.id as role.name for role in roles">
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.route_condition.contract_category" for="field_contract_category">contract_category</label>
+            <select class="form-control" id="field_contract_category" name="contract_category" ng-model="route_condition.contract_category.id" ng-options="category.id as category.name for category in categorys">
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

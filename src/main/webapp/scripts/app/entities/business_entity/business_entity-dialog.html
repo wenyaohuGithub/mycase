@@ -1,0 +1,73 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myBusiness_entityLabel" translate="mycaseApp.business_entity.home.createOrEditLabel">Create or edit a Business_entity</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label translate="global.field.id">ID</label>
+            <input type="text" class="form-control" name="id"
+                    ng-model="business_entity.id" readonly>
+        </div>
+
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="business_entity.name">
+
+            <div ng-show="editForm.name.$invalid">
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="business_entity.description">
+
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.registration_id" for="field_registration_id">Registration_id</label>
+            <input type="text" class="form-control" name="registration_id" id="field_registration_id"
+                    ng-model="business_entity.registration_id">
+
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.registered_capital" for="field_registered_capital">Registered_capital</label>
+            <input type="number" class="form-control" name="registered_capital" id="field_registered_capital"
+                    ng-model="business_entity.registered_capital">
+
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.registration_inspection_record" for="field_registration_inspection_record">Registration_inspection_record</label>
+            <input type="text" class="form-control" name="registration_inspection_record" id="field_registration_inspection_record"
+                    ng-model="business_entity.registration_inspection_record">
+
+        </div>
+
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.legal_representative" for="field_legal_representative">legal_representative</label>
+            <select class="form-control" id="field_legal_representative" name="legal_representative" ng-model="business_entity.legal_representative.id" ng-options="person.id as person.first_name for person in persons">
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.address" for="field_address">address</label>
+            <select class="form-control" id="field_address" name="address" ng-model="business_entity.addresss" ng-options="address as address.address_line_1 for address in addresss track by address.id">
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mycaseApp.business_entity.contract" for="field_contract">contract</label>
+            <select class="form-control" id="field_contract" multiple name="contract" ng-model="business_entity.contracts" ng-options="contract as contract.id for contract in contracts track by contract.id">
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

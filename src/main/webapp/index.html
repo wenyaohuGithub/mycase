@@ -10,6 +10,7 @@
         <!-- build:css assets/styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css assets/styles/main.css -->
@@ -22,10 +23,10 @@
         <![endif]-->
         <div id="wrapper">
             <div ui-view="navbar" ng-cloak=""></div>
-            <div id="page-wrapper">
+            <div id="page-wrapper" style="margin-top: 35px">
                 <div class="well" ui-view="content"></div>
 
-                <div class="footer">
+                <div class="footer" ng-cloak="">
                     <p translate="footer">This is your footer</p>
                 </div>
             </div>
@@ -76,17 +77,20 @@
     <script src="scripts/components/form/form.directive.js"></script>
     <script src="scripts/components/form/pager.directive.js"></script>
     <script src="scripts/components/form/pagination.directive.js"></script>
-    <script src="scripts/components/admin/audits.service.js"></script>
-    <script src="scripts/components/admin/logs.service.js"></script>
-    <script src="scripts/components/admin/configuration.service.js"></script>
-    <script src="scripts/components/admin/monitoring.service.js"></script>
+    <script src="scripts/components/system/audits.service.js"></script>
+    <script src="scripts/components/system/logs.service.js"></script>
+    <script src="scripts/components/system/configuration.service.js"></script>
+    <script src="scripts/components/system/monitoring.service.js"></script>
     <script src="scripts/components/navbar/navbar.directive.js"></script>
     <script src="scripts/components/navbar/navbar.controller.js"></script>
     <script src="scripts/components/user/user.service.js"></script>
     <script src="scripts/components/util/truncate.filter.js"></script>
     <script src="scripts/components/util/base64.service.js"></script>
+        <script src="scripts/components/util/fileupload.service.js"></script>
+        <script src="scripts/components/util/file-model.directive.js"></script>
     <script src="scripts/components/util/parse-links.service.js"></script>
     <script src="scripts/components/util/dateutil.service.js"></script>
+        <script src="scripts/components/util/urlparameter.service.js"></script>
     <script src="scripts/app/account/account.js"></script>
     <script src="scripts/app/account/activate/activate.js"></script>
     <script src="scripts/app/account/activate/activate.controller.js"></script>
@@ -105,30 +109,34 @@
     <script src="scripts/app/account/reset/finish/reset.finish.js"></script>
     <script src="scripts/app/account/reset/request/reset.request.controller.js"></script>
     <script src="scripts/app/account/reset/request/reset.request.js"></script>
-    <script src="scripts/app/admin/admin.js"></script>
-    <script src="scripts/app/admin/audits/audits.js"></script>
-    <script src="scripts/app/admin/audits/audits.controller.js"></script>
-    <script src="scripts/app/admin/configuration/configuration.js"></script>
-    <script src="scripts/app/admin/configuration/configuration.controller.js"></script>
-    <script src="scripts/app/admin/docs/docs.js"></script>
-    <script src="scripts/app/admin/health/health.js"></script>
-    <script src="scripts/app/admin/health/health.controller.js"></script>
-    <script src="scripts/app/admin/logs/logs.js"></script>
-    <script src="scripts/app/admin/logs/logs.controller.js"></script>
-    <script src="scripts/app/admin/metrics/metrics.js"></script>
-    <script src="scripts/app/admin/metrics/metrics.controller.js"></script>
+    <script src="scripts/app/system/system.js"></script>
+    <script src="scripts/app/system/audits/audits.js"></script>
+    <script src="scripts/app/system/audits/audits.controller.js"></script>
+    <script src="scripts/app/system/configuration/configuration.js"></script>
+    <script src="scripts/app/system/configuration/configuration.controller.js"></script>
+    <script src="scripts/app/system/docs/docs.js"></script>
+    <script src="scripts/app/system/health/health.js"></script>
+    <script src="scripts/app/system/health/health.controller.js"></script>
+    <script src="scripts/app/system/logs/logs.js"></script>
+    <script src="scripts/app/system/logs/logs.controller.js"></script>
+    <script src="scripts/app/system/metrics/metrics.js"></script>
+    <script src="scripts/app/system/metrics/metrics.controller.js"></script>
+        <script src="scripts/app/admin/user/user.js"></script>
+        <script src="scripts/app/admin/user/user.controller.js"></script>
+        <script src="scripts/app/admin/user/user-detail.controller.js"></script>
+        <script src="scripts/app/admin/user/user-dialog.controller.js"></script>
+        <script src="scripts/app/admin/authority/authority.js"></script>
+        <script src="scripts/app/admin/authority/authority.controller.js"></script>
+        <script src="scripts/app/admin/authority/authority-detail.controller.js"></script>
+        <script src="scripts/app/admin/authority/authority-dialog.controller.js"></script>
+        <script src="scripts/components/authority/authority.service.js"></script>
+        <script src="scripts/app/admin/admin.js"></script>
     <script src="scripts/app/entities/entity.js"></script>
     <script src="scripts/app/error/error.js"></script>
     <script src="scripts/app/main/main.js"></script>
     <script src="scripts/app/main/main.controller.js"></script>
         <script src="scripts/app/dashboard/dashboard.js"></script>
         <script src="scripts/app/dashboard/dashboard.controller.js"></script>
-        <script src="scripts/app/project/project.js"></script>
-        <script src="scripts/app/project/project.controller.js"></script>
-        <script src="scripts/app/contract/contract.js"></script>
-        <script src="scripts/app/contract/contract.controller.js"></script>
-        <script src="scripts/app/contract/contract-dialog.controller.js"></script>
-        <script src="scripts/app/contract/contract-detail.controller.js"></script>
     <script src="scripts/components/language/language.service.js"></script>
     <script src="scripts/components/language/language.controller.js"></script>
     <script src="scripts/components/auth/provider/auth.xauth.service.js"></script>
@@ -137,12 +145,104 @@
     <script src="scripts/app/entities/firstEntity/firstEntity-dialog.controller.js"></script>
     <script src="scripts/app/entities/firstEntity/firstEntity-detail.controller.js"></script>
     <script src="scripts/components/entities/firstEntity/firstEntity.service.js"></script>
-        <script src="scripts/components/entities/contract/contract.service.js"></script>
+
     <script src="scripts/app/entities/secondEntity/secondEntity.js"></script>
     <script src="scripts/app/entities/secondEntity/secondEntity.controller.js"></script>
     <script src="scripts/app/entities/secondEntity/secondEntity-dialog.controller.js"></script>
     <script src="scripts/app/entities/secondEntity/secondEntity-detail.controller.js"></script>
     <script src="scripts/components/entities/secondEntity/secondEntity.service.js"></script>
+    <script src="scripts/app/entities/category/category.js"></script>
+    <script src="scripts/app/entities/category/category.controller.js"></script>
+    <script src="scripts/app/entities/category/category-dialog.controller.js"></script>
+    <script src="scripts/app/entities/category/category-detail.controller.js"></script>
+    <script src="scripts/components/entities/category/category.service.js"></script>
+    <script src="scripts/app/entities/address/address.js"></script>
+    <script src="scripts/app/entities/address/address.controller.js"></script>
+    <script src="scripts/app/entities/address/address-dialog.controller.js"></script>
+    <script src="scripts/app/entities/address/address-detail.controller.js"></script>
+    <script src="scripts/components/entities/address/address.service.js"></script>
+    <script src="scripts/app/entities/person/person.js"></script>
+    <script src="scripts/app/entities/person/person.controller.js"></script>
+    <script src="scripts/app/entities/person/person-dialog.controller.js"></script>
+    <script src="scripts/app/entities/person/person-detail.controller.js"></script>
+    <script src="scripts/components/entities/person/person.service.js"></script>
+    <script src="scripts/app/entities/business_entity/business_entity.js"></script>
+    <script src="scripts/app/entities/business_entity/business_entity.controller.js"></script>
+    <script src="scripts/app/entities/business_entity/business_entity-dialog.controller.js"></script>
+    <script src="scripts/app/entities/business_entity/business_entity-detail.controller.js"></script>
+    <script src="scripts/components/entities/business_entity/business_entity.service.js"></script>
+    <script src="scripts/app/admin/department/department.js"></script>
+    <script src="scripts/app/admin/department/department.controller.js"></script>
+    <script src="scripts/app/admin/department/department-dialog.controller.js"></script>
+    <script src="scripts/app/admin/department/department-detail.controller.js"></script>
+    <script src="scripts/components/department/department.service.js"></script>
+    <script src="scripts/app/admin/role/role.js"></script>
+    <script src="scripts/app/admin/role/role.controller.js"></script>
+    <script src="scripts/app/admin/role/role-dialog.controller.js"></script>
+    <script src="scripts/app/admin/role/role-detail.controller.js"></script>
+    <script src="scripts/components/role/role.service.js"></script>
+    <script src="scripts/app/entities/process/process.js"></script>
+    <script src="scripts/app/entities/process/process.controller.js"></script>
+    <script src="scripts/app/entities/process/process-dialog.controller.js"></script>
+    <script src="scripts/app/entities/process/process-detail.controller.js"></script>
+    <script src="scripts/components/entities/process/process.service.js"></script>
+    <script src="scripts/app/entities/route/route.js"></script>
+    <script src="scripts/app/entities/route/route.controller.js"></script>
+    <script src="scripts/app/entities/route/route-dialog.controller.js"></script>
+    <script src="scripts/app/entities/route/route-detail.controller.js"></script>
+    <script src="scripts/components/entities/route/route.service.js"></script>
+    <script src="scripts/app/entities/route_condition/route_condition.js"></script>
+    <script src="scripts/app/entities/route_condition/route_condition.controller.js"></script>
+    <script src="scripts/app/entities/route_condition/route_condition-dialog.controller.js"></script>
+    <script src="scripts/app/entities/route_condition/route_condition-detail.controller.js"></script>
+    <script src="scripts/components/entities/route_condition/route_condition.service.js"></script>
+    <script src="scripts/app/entities/contract_sample/contract_sample.js"></script>
+    <script src="scripts/app/entities/contract_sample/contract_sample.controller.js"></script>
+    <script src="scripts/app/entities/contract_sample/contract_sample-dialog.controller.js"></script>
+    <script src="scripts/app/entities/contract_sample/contract_sample-detail.controller.js"></script>
+        <script src="scripts/app/entities/contract_sample/samplePDF.controller.js"></script>
+    <script src="scripts/components/entities/contract_sample/contract_sample.service.js"></script>
+    <script src="scripts/app/entities/bank_account/bank_account.js"></script>
+    <script src="scripts/app/entities/bank_account/bank_account.controller.js"></script>
+    <script src="scripts/app/entities/bank_account/bank_account-dialog.controller.js"></script>
+    <script src="scripts/app/entities/bank_account/bank_account-detail.controller.js"></script>
+    <script src="scripts/components/entities/bank_account/bank_account.service.js"></script>
+    <script src="scripts/app/project/project.js"></script>
+    <script src="scripts/app/project/project.controller.js"></script>
+    <script src="scripts/app/project/project-dialog.controller.js"></script>
+    <script src="scripts/app/project/project-detail.controller.js"></script>
+    <script src="scripts/components/project/project.service.js"></script>
+    <script src="scripts/app/entities/fund_source/fund_source.js"></script>
+    <script src="scripts/app/entities/fund_source/fund_source.controller.js"></script>
+    <script src="scripts/app/entities/fund_source/fund_source-dialog.controller.js"></script>
+    <script src="scripts/app/entities/fund_source/fund_source-detail.controller.js"></script>
+    <script src="scripts/components/entities/fund_source/fund_source.service.js"></script>
+    <script src="scripts/app/entities/contract_party/contract_party.js"></script>
+    <script src="scripts/app/entities/contract_party/contract_party.controller.js"></script>
+    <script src="scripts/app/entities/contract_party/contract_party-dialog.controller.js"></script>
+    <script src="scripts/app/entities/contract_party/contract_party-detail.controller.js"></script>
+    <script src="scripts/components/entities/contract_party/contract_party.service.js"></script>
+    <script src="scripts/app/entities/contract/contract.js"></script>
+    <script src="scripts/app/entities/contract/contract.controller.js"></script>
+    <script src="scripts/app/entities/contract/contract-dialog.controller.js"></script>
+    <script src="scripts/app/entities/contract/contract-detail.controller.js"></script>
+        <script src="scripts/app/entities/contract/contract-detail-activities.controller.js"></script>
+        <script src="scripts/components/entities/contract/contract.service.js"></script>
+    <script src="scripts/app/entities/workflow/workflow.js"></script>
+    <script src="scripts/app/entities/workflow/workflow.controller.js"></script>
+    <script src="scripts/app/entities/workflow/workflow-dialog.controller.js"></script>
+    <script src="scripts/app/entities/workflow/workflow-detail.controller.js"></script>
+    <script src="scripts/components/entities/workflow/workflow.service.js"></script>
+    <script src="scripts/app/entities/contract_history/contract_history.js"></script>
+    <script src="scripts/app/entities/contract_history/contract_history.controller.js"></script>
+    <script src="scripts/app/entities/contract_history/contract_history-dialog.controller.js"></script>
+    <script src="scripts/app/entities/contract_history/contract_history-detail.controller.js"></script>
+    <script src="scripts/components/entities/contract_history/contract_history.service.js"></script>
+    <script src="scripts/app/entities/testEntity/testEntity.js"></script>
+    <script src="scripts/app/entities/testEntity/testEntity.controller.js"></script>
+    <script src="scripts/app/entities/testEntity/testEntity-dialog.controller.js"></script>
+    <script src="scripts/app/entities/testEntity/testEntity-detail.controller.js"></script>
+    <script src="scripts/components/entities/testEntity/testEntity.service.js"></script>
     <!-- endbuild -->
 </body>
 </html>

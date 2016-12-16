@@ -261,3 +261,96 @@ ul#strengthBar {
     margin: 10px 0 10px;
     border-bottom: 1px solid #eee;
 }
+
+.fileinput-button {
+    position: relative;
+    display: inline-block;
+}
+
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px !important;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.file-selected {
+    color: #337ab7;
+    background-color: white;
+    padding-left: 5px;
+    margin-left: 50px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.fixed_headers {
+    width: 1000px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.fixed_headers th {
+    text-decoration: underline;
+}
+.fixed_headers th,
+.fixed_headers td {
+    padding: 5px;
+    text-align: left;
+}
+.fixed_headers td:nth-child(1),
+.fixed_headers th:nth-child(1) {
+    min-width: 200px;
+}
+.fixed_headers td:nth-child(2),
+.fixed_headers th:nth-child(2) {
+    min-width: 200px;
+}
+.fixed_headers td:nth-child(3),
+.fixed_headers th:nth-child(3) {
+    width: 350px;
+}
+.fixed_headers thead {
+    background-color: #333333;
+    color: #fdfdfd;
+}
+.fixed_headers thead tr {
+    display: block;
+    position: relative;
+}
+.fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 300px;
+}
+.fixed_headers tbody tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    position: fixed;
+    right: 30px;
+    left: 0;
+    z-index: 1020;
+    padding-right: 5px;
+}
+
+.myitem {
+    display:table-cell;
+}
+
+#mainView {
+    border: 1px solid black;
+    clear: both;
+    padding: 0 1em;
+}
+.active {
+    background-color: #FFF;
+    color: #000;
+}

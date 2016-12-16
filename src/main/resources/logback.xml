@@ -27,7 +27,7 @@
     </appender>
 -->
 
-    <logger name="com.hu.mycase" level="${logback.loglevel}"/>
+    <logger name="com.hu.cm" level="${logback.loglevel}"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>

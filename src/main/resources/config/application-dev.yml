@@ -10,7 +10,7 @@ spring:
     datasource:
         dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
         url:
-        databaseName: mycase
+        databaseName: ContractManager
         serverName: localhost
         username: postgres
         password: Scala350!

@@ -37,7 +37,7 @@ angular.module('mycaseApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalp
                 $window.document.title = title;
             });
             if (Principal.isIdentityResolved()){
-                if(!Principal.isAuthenticated()){
+                if(!Principal.isAuthenticated() && toState.name != 'register'){
                     $state.go('login');
                 }
             }
@@ -51,6 +51,12 @@ angular.module('mycaseApp', ['LocalStorageModule', 'tmh.dynamicLocale', 'pascalp
                 $state.go($rootScope.previousStateName, $rootScope.previousStateParams);
             }
         };
+
+/*
+        $rootScope.$on('$viewContentLoading',
+            function(event, viewConfig){
+                console.log("View Load: the view is loaded, and DOM rendered!");
+            });*/
     })
     .factory('authInterceptor', function ($rootScope, $q, $location, localStorageService) {
         return {

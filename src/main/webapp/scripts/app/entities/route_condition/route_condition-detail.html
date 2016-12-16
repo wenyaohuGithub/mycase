@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span translate="mycaseApp.route_condition.detail.title">Route_condition</span> {{route_condition.id}}</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.route_condition.previous_step_result">Previous_step_result</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{route_condition.previous_step_result}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.route_condition.route">route</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{route_condition.route.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.route_condition.submitter_role">submitter_role</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{route_condition.submitter_role.name}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="mycaseApp.route_condition.contract_category">contract_category</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{route_condition.contract_category.name}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="route_condition"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

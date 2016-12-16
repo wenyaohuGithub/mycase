@@ -1,0 +1,22 @@
+id;name;description;type;parent_id;active
+1;BEIJING_BRANCH;Beijing branch company;BRANCH;null;true
+2;DEPT_FINANCE;Finance department;DEPT;1;true
+3;DEPT_LEGAL;Legal department;DEPT;1;true
+4;DEPT_TECHNOLOGY;Technology department;DEPT;1;true
+5;DEPT_DEV_STRATEGY;Development and Strategy department;DEPT;1;true
+6;DIV_FIN_1;Finance department 1st division;DIV;2;true
+7;DIV_FIN_2;Finance department 2nd division;DIV;2;true
+8;DIV_FIN_3;Finance department 3rd division;DIV;2;true
+9;DIV_TECH_1;Technology department 1st division;DIV;4;true
+10;DIV_TECH_2;Technology department 2nd division;DIV;4;true
+11;DIV_TECH_3;Technology department 3rd division;DIV;4;true
+12;DEPT_MARKETING;Marketing department;DEPT;1;true
+13;DIV_MARKETING_1;Marketing department 1st division;DIV;12;true
+14;DIV_MARKETING_2;Marketing department 2nd division;DIV;12;true
+15;DIV_MARKETING_3;Marketing department 3rd division;DIV;12;true
+16;DEPT_SALES;Sales department;DEPT;1;true
+17;DIV_SALES_1;Sales department 1st division;DIV;16;true
+18;DIV_SALES_2;Sales department 2nd division;DIV;16;true
+19;DIV_SALES_3;Sales department 3rd division;DIV;16;true
+
+

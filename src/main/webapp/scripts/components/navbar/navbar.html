@@ -1,4 +1,9 @@
-<nav class="navbar navbar-default" role="navigation">
+<li ui-sref-active="active" ><a ui-sref="testEntity"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.testEntity">testEntity</span></a></li>
+<li ui-sref-active="active" ><a ui-sref="contract_history"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.contract_history">contract_history</span></a></li>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -38,6 +43,7 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <span>
                                     <span class="glyphicon glyphicon-alert"></span>
+                                    <!--<i class="fa fa-camera-retro fa-lg"></i>-->
                                     <span class="hidden-tablet" translate="global.menu.alert">
                                         Alert
                                     </span>
@@ -57,7 +63,7 @@
                         <li ui-sref-active="active" ><a ui-sref="register"><span class="glyphicon glyphicon-plus-sign"></span>
                             &#xA0;<span translate="global.menu.account.register">Register</span></a></li>
                     </ul>
-                </li>
+                </li><!--
                 <li ui-sref-active="active" ng-switch-when="true" class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <span>
@@ -68,14 +74,31 @@
                                     <b class="caret"></b>
                                 </span>
                     </a>
+
                     <ul class="dropdown-menu">
+
                         <li ui-sref-active="active" ><a ui-sref="firstEntity"><span class="glyphicon glyphicon-asterisk"></span>
                         &#xA0;<span translate="global.menu.entities.firstEntity">firstEntity</span></a></li>
                         <li ui-sref-active="active" ><a ui-sref="secondEntity"><span class="glyphicon glyphicon-asterisk"></span>
                         &#xA0;<span translate="global.menu.entities.secondEntity">secondEntity</span></a></li>
-                        <!-- JHipster will add entities to the menu here -->
+                        <li ui-sref-active="active" ><a ui-sref="category"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.category">category</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="address"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.address">address</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="person"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.person">person</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="business_entity"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.business_entity">business_entity</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="process"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.process">process</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="route"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.route">route</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="route_condition"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.route_condition">route_condition</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="contract_sample"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.entities.contract_sample">contract_sample</span></a></li>
                     </ul>
-                </li>
+                </li>-->
                 <li ng-class="{active: $state.includes('account')}" class="dropdown pointer">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <span>
@@ -109,20 +132,40 @@
                                 </span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li ui-sref-active="active"><a ui-sref="metrics"><span class="glyphicon glyphicon-dashboard"></span>
-                            &#xA0;<span translate="global.menu.admin.metrics">Metrics</span></a></li>
-                        <li ui-sref-active="active"><a ui-sref="health"><span class="glyphicon glyphicon-heart"></span>
-                            &#xA0;<span translate="global.menu.admin.health">Health</span></a></li>
-                        <li ui-sref-active="active"><a ui-sref="configuration"><span class="glyphicon glyphicon-list-alt"></span>
-                            &#xA0;<span translate="global.menu.admin.configuration">Configuration</span></a></li>
-                        <li ui-sref-active="active"><a ui-sref="audits"><span class="glyphicon glyphicon-bell"></span>
-                            &#xA0;<span translate="global.menu.admin.audits">Audits</span></a></li>
-                        <li ui-sref-active="active"><a ui-sref="logs"><span class="glyphicon glyphicon-tasks"></span>
-                            &#xA0;<span translate="global.menu.admin.logs">Logs</span></a></li>
-                        <li ui-sref-active="active"><a ui-sref="docs"><span class="glyphicon glyphicon-book"></span>
-                            &#xA0;<span translate="global.menu.admin.apidocs">API</span></a></li>
+                        <li ui-sref-active="active" ><a ui-sref="department"><span class="glyphicon glyphicon-asterisk"></span>
+                            &#xA0;<span translate="global.menu.entities.department">department</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="role"><span class="glyphicon glyphicon-cog"></span>
+                            &#xA0;<span translate="global.menu.admin.role">Role</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="user"><span class="glyphicon glyphicon-user"></span>
+                            &#xA0;<span translate="global.menu.admin.user">User</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="authority"><span class="glyphicon glyphicon-certificate"></span>
+                            &#xA0;<span translate="global.menu.admin.authority">Authority</span></a></li>
                     </ul>
                 </li>
+                <li ng-class="{active: $state.includes('system')}"  ng-switch-when="true" has-role="ROLE_ADMIN" class="dropdown pointer">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                    <span class="hidden-tablet" translate="global.menu.system.main">System</span>
+                                    <b class="caret"></b>
+                                </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ui-sref-active="active"><a ui-sref="metrics"><span class="glyphicon glyphicon-dashboard"></span>
+                            &#xA0;<span translate="global.menu.system.metrics">Metrics</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="health"><span class="glyphicon glyphicon-heart"></span>
+                            &#xA0;<span translate="global.menu.system.health">Health</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="configuration"><span class="glyphicon glyphicon-list-alt"></span>
+                            &#xA0;<span translate="global.menu.system.configuration">Configuration</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="audits"><span class="glyphicon glyphicon-bell"></span>
+                            &#xA0;<span translate="global.menu.system.audits">Audits</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="logs"><span class="glyphicon glyphicon-tasks"></span>
+                            &#xA0;<span translate="global.menu.system.logs">Logs</span></a></li>
+                        <li ui-sref-active="active"><a ui-sref="docs"><span class="glyphicon glyphicon-book"></span>
+                            &#xA0;<span translate="global.menu.system.apidocs">API</span></a></li>
+                    </ul>
+                </li>
+                <!--
                 <li ui-sref-active="active" class="dropdown pointer" ng-controller="LanguageController">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="">
                                 <span>
@@ -136,11 +179,11 @@
                             <a href="" ng-click="changeLanguage(language)">{{language | findLanguageFromKey}}</a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
             </ul>
         </div>
 </nav>
-<div class="navbar-default sidebar" role="navigation">
+<div class="navbar-default sidebar" role="navigation" style="margin-top: 20px">
     <div class="sidebar-nav navbar-collapse" ng-switch="isAuthenticated()">
         <ul class="nav" id="side-menu" ng-switch-when="true">
             <li class="sidebar-search">
@@ -167,7 +210,7 @@
                 </a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="home">
+                <a ui-sref="category">
                     <span class="glyphicon glyphicon-list-alt"></span>
                     <span translate="global.menu.category">Category</span>
                 </a>
@@ -180,15 +223,46 @@
             </li>
             <li ui-sref-active="active">
                 <a ui-sref="home">
-                    <span class="glyphicon glyphicon-menu-left"></span>
-                    <span translate="global.menu.team">Team</span>
-                </a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="home">
                     <span class="glyphicon glyphicon-tasks"></span>
                     <span translate="global.menu.task">Task</span>
                 </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="contract_party">
+                    <span class="glyphicon glyphicon-asterisk"></span>
+                    <span translate="global.menu.contract_party">contract_party</span>
+                </a>
+            </li>
+
+            <li ui-sref-active="active" class="dropdown pointer">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                <span>
+                                    <span class="glyphicon glyphicon-th-list"></span>
+                                    <span class="hidden-tablet" translate="global.menu.configurations.main">
+                                        Configurations
+                                    </span>
+                                    <b class="caret"></b>
+                                </span>
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li ui-sref-active="active" ><a ui-sref="address"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.configurations.address">address</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="process"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.configurations.process">process</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="workflow"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.configurations.workflow">workflow</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="route"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.configurations.route">route</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="route_condition"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.configurations.route_condition">route_condition</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="contract_sample"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.configurations.contract_sample">contract_sample</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="bank_account"><span class="glyphicon glyphicon-asterisk"></span>
+                    &#xA0;<span translate="global.menu.configurations.bank_account">bank_account</span></a></li>
+                    <li ui-sref-active="active" ><a ui-sref="fund_source"><span class="glyphicon glyphicon-asterisk"></span>
+                        &#xA0;<span translate="global.menu.configurations.fund_source">fund_source</span></a></li>
+                </ul>
             </li>
         </ul>
     </div>

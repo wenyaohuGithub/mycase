@@ -17,23 +17,23 @@
             overflowToDisk="false"
             />
 
-    <cache name="com.hu.mycase.domain.User"
+    <cache name="com.hu.cm.domain.admin.User"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.hu.mycase.domain.Authority"
+    <cache name="com.hu.cm.domain.admin.Authority"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.hu.mycase.domain.User.authorities"
+    <cache name="com.hu.cm.domain.admin.User.authorities"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.hu.mycase.domain.PersistentToken"
+    <cache name="com.hu.cm.domain.PersistentToken"
            timeToLiveSeconds="3600">
     </cache>
 
-    <cache name="com.hu.mycase.domain.User.persistentTokens"
+    <cache name="com.hu.cm.domain.admin.User.persistentTokens"
            timeToLiveSeconds="3600">
     </cache>
 </ehcache>

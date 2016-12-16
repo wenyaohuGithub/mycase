@@ -9,11 +9,11 @@ spring:
         active: prod
     datasource:
         dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
-        url: 
-        databaseName: mycase
+        url:
+        databaseName: ContractManager
         serverName: localhost
-        username: mycase
-        password: 
+        username: postgres
+        password: Scala350!
 
     jpa:
         database-platform: org.hibernate.dialect.PostgreSQL82Dialect
@@ -29,7 +29,7 @@ spring:
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: false
             hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
-            
+
     thymeleaf:
         mode: XHTML
         cache: true
